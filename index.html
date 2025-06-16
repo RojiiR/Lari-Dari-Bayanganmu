@@ -1,86 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta charset="utf-8" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <title>Lari Dari Bayangan Mantan</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <title>Lari Dari Bayangan Mantan</title>
 
-    <style>
-        body {
-            background: #000000;
-            color: #cccccc;
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
-        }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .gm4html5_div_class {
+      text-align: center;
+    }
+  </style>
 
-        canvas {
-            image-rendering: optimizeSpeed;
-            -webkit-interpolation-mode: nearest-neighbor;
-            -ms-touch-action: none;
-            touch-action: none;
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
-        }
+  <!-- Firebase SDK (Non-module for compatibility) -->
+  <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics-compat.js"></script>
 
-        :-webkit-full-screen #canvas,
-        :-webkit-full-screen {
-            width: 100%;
-            height: 100%;
-        }
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9uajVzqiNDtn_Qj-ejM6SEgqVUW-960s",
+      authDomain: "game-lari-dari-bayanganmu.firebaseapp.com",
+      projectId: "game-lari-dari-bayanganmu",
+      storageBucket: "game-lari-dari-bayanganmu.firebasestorage.app",
+      messagingSenderId: "377789716497",
+      appId: "1:377789716497:web:58e6ffaba41b7f588979b0",
+      measurementId: "G-CJPW08HJFS"
+    };
 
-        div.gm4html5_div_class {
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
-        }
-
-        div.gm4html5_login {
-            padding: 20px;
-            position: absolute;
-            border: solid 2px #000000;
-            background-color: #404040;
-            color: #00ff00;
-            border-radius: 15px;
-            box-shadow: #101010 20px 20px 40px;
-        }
-
-        div.gm4html5_cancel_button {
-            float: right;
-        }
-
-        div.gm4html5_login_button {
-            float: left;
-        }
-
-        div.gm4html5_login_header {
-            text-align: center;
-        }
-    </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDVMB98BQL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZDVMB98BQL');
-    </script>
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+  </script>
 </head>
 
 <body>
-    <div class="gm4html5_div_class" id="gm4html5_div_id">
-        <canvas id="canvas" width="1280" height="720">
-            <p>Your browser doesn't support HTML5 canvas.</p>
-        </canvas>
-    </div>
+  <div class="gm4html5_div_class" id="gm4html5_div_id">
+    <canvas id="canvas" width="1280" height="720">
+      <p>Your browser doesn't support HTML5 canvas.</p>
+    </canvas>
+  </div>
 
-    <script type="text/javascript" src="html5game/Lari Dari Bayangmu.js?cachebust=550907801"></script>
-    <script>window.onload = GameMaker_Init;</script>
+  <!-- GameMaker Exported JS -->
+  <script type="text/javascript" src="html5game/Lari Dari Bayangmu.js"></script>
+  <script>
+    window.onload = GameMaker_Init;
+  </script>
 </body>
 </html>
